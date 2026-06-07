@@ -1,0 +1,44 @@
+{
+    "name": "flametrench/audit",
+    "description": "Audit primitive for Flametrench: append-only, identity- and tenancy-aware action log. Spec-conformant per ADR 0019.",
+    "type": "library",
+    "license": "Apache-2.0",
+    "keywords": ["flametrench", "audit", "audit-log", "append-only", "compliance"],
+    "homepage": "https://flametrench.dev",
+    "authors": [
+        {
+            "name": "NDC Digital, LLC",
+            "homepage": "https://flametrench.dev"
+        }
+    ],
+    "repositories": [
+        {"type": "path", "url": "../ids-php", "options": {"symlink": true}}
+    ],
+    "require": {
+        "php": "^8.3",
+        "flametrench/ids": "^0.4.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flametrench\\Audit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
