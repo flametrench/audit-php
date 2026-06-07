@@ -11,9 +11,6 @@
             "homepage": "https://flametrench.dev"
         }
     ],
-    "repositories": [
-        {"type": "path", "url": "../ids-php", "options": {"symlink": true}}
-    ],
     "require": {
         "php": "^8.3",
         "flametrench/ids": "^0.4.0"
